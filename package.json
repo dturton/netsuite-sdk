@@ -1,6 +1,6 @@
 {
   "name": "netsuite-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript-first NetSuite REST API client with first-class SuiteQL support",
   "author": "David Turton",
   "repository": {
