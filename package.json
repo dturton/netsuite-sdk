@@ -1,7 +1,16 @@
 {
   "name": "netsuite-sdk",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "TypeScript-first NetSuite REST API client with first-class SuiteQL support",
+  "author": "David Turton",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dturton/netsuite-sdk.git"
+  },
+  "homepage": "https://github.com/dturton/netsuite-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/dturton/netsuite-sdk/issues"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -18,7 +27,8 @@
   },
   "files": [
     "dist/**",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsup",
@@ -28,7 +38,8 @@
     "test:coverage": "vitest run --coverage",
     "lint": "eslint \"src/**/*.ts\"",
     "typecheck": "tsc --noEmit",
-    "clean": "rm -rf dist node_modules"
+    "clean": "rm -rf dist node_modules",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "axios": "^1.6.8",
