@@ -2,6 +2,7 @@ import { HttpTransport } from './transport/http-transport.js';
 import { SuiteQLClient } from './suiteql/suiteql-client.js';
 import { RecordClient } from './records/record-client.js';
 import { RestletClient } from './restlets/restlet-client.js';
+import { MetadataClient } from './metadata/metadata-client.js';
 import { validateConfig } from './utils/validation.js';
 import type { NetSuiteConfig } from './types/config.js';
 import type { RequestOptions, NetSuiteResponse } from './types/http.js';
@@ -48,6 +49,9 @@ export class NetSuiteClient {
   /** RESTlet caller */
   public readonly restlets: RestletClient;
 
+  /** Metadata catalog introspection */
+  public readonly metadata: MetadataClient;
+
   private readonly transport: HttpTransport;
 
   constructor(config: NetSuiteConfig) {
@@ -60,6 +64,7 @@ export class NetSuiteClient {
     this.suiteql = new SuiteQLClient(this.transport, config.accountId);
     this.records = new RecordClient(this.transport, config.accountId);
     this.restlets = new RestletClient(this.transport, config.accountId);
+    this.metadata = new MetadataClient(this.transport, config.accountId);
   }
 
   /** Add middleware to all requests. Returns `this` for chaining. */

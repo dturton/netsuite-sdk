@@ -33,6 +33,11 @@ export type {
   Logger,
   // Error details
   NetSuiteErrorDetail,
+  // Metadata
+  MetadataCatalogEntry,
+  MetadataCatalogResponse,
+  MetadataCatalogOptions,
+  RecordMetadataOptions,
 } from './types/index.js';
 
 // RESTlet types

@@ -16,3 +16,9 @@ export type {
   RecordGetOptions,
   RecordType,
 } from './records.js';
+export type {
+  MetadataCatalogEntry,
+  MetadataCatalogResponse,
+  MetadataCatalogOptions,
+  RecordMetadataOptions,
+} from './metadata.js';
